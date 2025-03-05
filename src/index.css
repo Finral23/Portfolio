@@ -1,1 +1,43 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
+
+:root {
+  --main-color: #4b75f2;
+  --bg-color-light: #c5d0d9;
+  --bg-color-dark: #121212;
+  --text-color-dark: #0d0d0d;
+  --text-color-light: #ececec;
+}
+
+.bg-light {
+  background-color: var(--bg-color-light);
+}
+
+.bg-dark {
+  background-color: var(--bg-color-dark);
+}
+
+.bg-blue {
+  background-color: var(--main-color);
+}
+
+.text-dark {
+  color: var(--text-color-dark);
+}
+
+.text-light {
+  color: var(--text-color-light);
+}
+
+.color-blue {
+  color: var(--main-color);
+}
+
+.custom-gradient {
+  background: linear-gradient(180deg, #000000 0%, #0b0f19 50%, #102048 100%);
+}
+
+li > a:hover {
+  color: var(--main-color);
+  transition: 300ms;
+}

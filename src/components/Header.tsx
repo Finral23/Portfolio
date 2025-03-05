@@ -1,19 +1,28 @@
+import Button from "./Button";
+import logo from "../assets/logo.png";
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-6 bg-black text-white">
-      <div className="text-2xl font-bold">My Portfolio</div>
-      <nav>
-        <ul className="flex space-x-6">
+    <header className="flex justify-between items-center p-6">
+      <img src={logo} className="w-15 m-8" />
+      <nav className="flex space-x-8 py-1 self-center">
+        <ul className="flex space-x-6 text-light self-center">
           <li>
-            <a>Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a>Portfolio</a>
+            <a href="#">Portfolio</a>
           </li>
           <li>
-            <a>Contact</a>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
           </li>
         </ul>
+        <Button>Get in Touch</Button>
       </nav>
     </header>
   );
