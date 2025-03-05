@@ -1,6 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -9,7 +9,10 @@ function App() {
         <div className="absolute fixed inset-0 bg-[url(./assets/bg-image.png)] bg-no-repeat bg-center "></div>
         <div className="relative z-10">
           <Header />
-          <Home />
+          <div className="max-w-6xl mx-auto">
+            <Hero />
+          </div>
+
           <Footer />
         </div>
       </div>

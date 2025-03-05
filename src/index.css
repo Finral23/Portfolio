@@ -2,11 +2,11 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --main-color: #4b75f2;
-  --bg-color-light: #c5d0d9;
-  --bg-color-dark: #121212;
-  --text-color-dark: #0d0d0d;
-  --text-color-light: #ececec;
+  --main-color: #4b75f2; /* blue-500 */
+  --bg-color-light: #c5d0d9; /* slate-300 */
+  --bg-color-dark: #121212; /* neutral-900 */
+  --text-color-dark: #0d0d0d; /* neutral-950 */
+  --text-color-light: #ececec; /* gray-200 */
 }
 
 .bg-light {

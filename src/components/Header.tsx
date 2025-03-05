@@ -2,7 +2,7 @@ import Button from "./Button";
 import logo from "../assets/logo.png";
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-6">
+    <header className="flex justify-between items-center p-6 w-full">
       <img src={logo} className="w-15 m-8" />
       <nav className="flex space-x-8 py-1 self-center">
         <ul className="flex space-x-6 text-light self-center">
