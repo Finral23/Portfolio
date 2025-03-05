@@ -3,7 +3,7 @@ import GradientText from "./GradientText";
 
 const Hero = () => {
   return (
-    <section className=" text-white min-h-screen px-6">
+    <div className=" text-white px-6">
       <div className="max-w-3xl">
         <h1 className="text-7xl font-bold">
           Your <GradientText>vision</GradientText>, our{" "}
@@ -29,7 +29,7 @@ const Hero = () => {
         </ul>
         <ButtonOutline>View works →</ButtonOutline>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Info from "./components/Info";
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
           <Header />
           <div className="max-w-6xl mx-auto">
             <Hero />
+            <Info />
           </div>
-
           <Footer />
         </div>
       </div>
