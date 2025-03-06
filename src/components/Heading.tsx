@@ -3,13 +3,17 @@ interface Props {
   heading: string;
 }
 
-const HeadingBlue = ({ title, heading }: Props) => {
+const Heading = ({ title, heading }: Props) => {
   return (
-    <>
-      <p className="  text-blue-500 tracking-widest pb-2">{title}</p>
-      <h1 className="text-5xl text-light font-bold pb-4">{heading}</h1>
-    </>
+    <div>
+      <p className="text-blue-500 tracking-widest pb-2">
+        {title.toUpperCase()}
+      </p>
+      <h1 className="text-5xl text-light font-bold pb-4">
+        {heading.toUpperCase()}
+      </h1>
+    </div>
   );
 };
 
-export default HeadingBlue;
+export default Heading;

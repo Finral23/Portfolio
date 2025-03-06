@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Info from "./components/Info";
+import Works from "./components/Works";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <div className="max-w-6xl mx-auto">
             <Hero />
             <Info />
+            <Works />
           </div>
           <Footer />
         </div>

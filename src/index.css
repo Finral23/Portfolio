@@ -15,12 +15,6 @@
   font-style: normal;
 }
 
-.info-numeration {
-  font-family: "Highrise";
-  font-size: 30rem;
-  line-height: 70%;
-}
-
 .bg-light {
   background-color: var(--bg-color-light);
 }
@@ -57,4 +51,9 @@ li > a:hover {
 .bg-glow {
   background: url("/info-light.png") no-repeat center bottom;
   background-size: cover;
+}
+
+.info-numeration {
+  font-family: "Highrise";
+  line-height: 70%;
 }

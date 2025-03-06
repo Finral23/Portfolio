@@ -38,8 +38,8 @@ const Info = () => {
   };
 
   return (
-    <div className="text-gray-200 py-16 px-4 mx-auto">
-      <Heading title="OUR AGENCY" heading="WHY CHOOSE US?" />
+    <div className="text-gray-200 py-16 mx-auto">
+      <Heading title="Our Agency" heading="why choose us?" />
       <div className="border-b border-blue-500" />
       <div>
         {accordionData.map((item, index) => {
@@ -49,7 +49,7 @@ const Info = () => {
             <motion.div
               key={index}
               initial={{ height: 300 }}
-              animate={{ height: isOpen ? 380 : 230 }}
+              animate={{ height: isOpen ? "auto" : 230 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
               className="border-b border-blue-500 overflow-hidden relative"
             >
@@ -74,7 +74,7 @@ const Info = () => {
               >
                 <div className="flex gap-6 items-center">
                   <motion.span
-                    className="info-numeration text-[180px]"
+                    className="info-numeration text-[300px] md:text-[30rem]"
                     initial={{ y: 40, opacity: 0.7 }}
                     animate={{ y: isOpen ? 0 : 40, opacity: isOpen ? 1 : 0.7 }}
                     transition={{ duration: 0.5 }}
@@ -89,7 +89,7 @@ const Info = () => {
                     transition={{ duration: 0.5 }}
                   >
                     <motion.span
-                      className="text-5xl font-light"
+                      className="text-2xl md:text-5xl font-light"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5 }}
