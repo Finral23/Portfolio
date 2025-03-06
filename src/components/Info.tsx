@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ButtonExpand from "./ButtonExpand";
-import HeadingBlue from "./HeadingBlue";
 import { motion, AnimatePresence } from "motion/react";
+import Heading from "./Heading";
 
 const accordionData = [
   {
@@ -39,10 +39,8 @@ const Info = () => {
 
   return (
     <div className="text-gray-200 py-16 px-4 mx-auto">
-      <HeadingBlue>OUR AGENCY</HeadingBlue>
-      <h2 className="text-5xl font-bold border-b border-blue-500 pb-4">
-        WHY CHOOSE US?
-      </h2>
+      <Heading title="OUR AGENCY" heading="WHY CHOOSE US?" />
+      <div className="border-b border-blue-500" />
       <div>
         {accordionData.map((item, index) => {
           const isOpen = openIndex === index;
@@ -55,11 +53,10 @@ const Info = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
               className="border-b border-blue-500 overflow-hidden relative"
             >
-              {/* Свечение при открытии */}
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
-                    key={`glow-${index}`} // Уникальный ключ для корректного выхода
+                    key={`glow-${index}`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -76,7 +73,6 @@ const Info = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex gap-6 items-center">
-                  {/* Анимация числа */}
                   <motion.span
                     className="info-numeration text-[180px]"
                     initial={{ y: 40, opacity: 0.7 }}
@@ -86,7 +82,6 @@ const Info = () => {
                     {item.number}
                   </motion.span>
 
-                  {/* Анимация заголовка и контента */}
                   <motion.div
                     className="text-start"
                     initial={{ y: 80 }}
@@ -102,7 +97,6 @@ const Info = () => {
                       {item.title}
                     </motion.span>
 
-                    {/* Контент с анимацией высоты и плавного появления */}
                     <motion.div
                       className="overflow-hidden text-gray-200"
                       initial={{ opacity: 0, height: 0 }}
@@ -117,7 +111,6 @@ const Info = () => {
                   </motion.div>
                 </div>
 
-                {/* Кнопка с плавным смещением */}
                 <motion.span
                   className="text-2xl"
                   initial={{ y: 0 }}
