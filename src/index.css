@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss/utilities";
 
 :root {
   --main-color: #4b75f2; /* blue-500 */
@@ -7,6 +6,19 @@
   --bg-color-dark: #121212; /* neutral-900 */
   --text-color-dark: #0d0d0d; /* neutral-950 */
   --text-color-light: #ececec; /* gray-200 */
+}
+
+@font-face {
+  font-family: "Highrise";
+  src: url("/fonts/HighriseFontCondensed.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.info-numeration {
+  font-family: "Highrise";
+  font-size: 30rem;
+  line-height: 70%;
 }
 
 .bg-light {
@@ -40,4 +52,9 @@
 li > a:hover {
   color: var(--main-color);
   transition: 300ms;
+}
+
+.bg-glow {
+  background: url("/info-light.png") no-repeat center bottom;
+  background-size: cover;
 }
