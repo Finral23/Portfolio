@@ -49,7 +49,7 @@ li > a:hover {
 }
 
 .bg-glow {
-  background: url("/info-light.png") no-repeat center bottom;
+  background: url("/light.png") no-repeat center bottom;
   background-size: cover;
 }
 

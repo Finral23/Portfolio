@@ -17,7 +17,7 @@ const GlowButton = ({ children }: Props) => {
       whileHover={{
         boxShadow: "0px 0px 30px rgba(59,130,246,0.9)",
       }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
     >
       {children}
     </motion.a>
