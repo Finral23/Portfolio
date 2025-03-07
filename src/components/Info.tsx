@@ -40,7 +40,7 @@ const Info = () => {
   return (
     <div className="text-gray-200 py-16 mx-auto">
       <Heading title="Our Agency" heading="why choose us?" />
-      <div className="border-b border-blue-500" />
+      <div className="border-b-2 border-blue-900" />
       <div>
         {accordionData.map((item, index) => {
           const isOpen = openIndex === index;
@@ -51,7 +51,7 @@ const Info = () => {
               initial={{ height: 300 }}
               animate={{ height: isOpen ? "auto" : 230 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="border-b border-blue-500 overflow-hidden relative"
+              className="border-b-2 border-blue-900 overflow-hidden relative"
             >
               <AnimatePresence>
                 {isOpen && (

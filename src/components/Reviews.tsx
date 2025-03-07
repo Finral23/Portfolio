@@ -2,6 +2,7 @@ import Heading from "./Heading";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 
 const reviews = [
   {
@@ -59,9 +60,11 @@ const Reviews = () => {
       <Heading title="Reviews" heading="our clients say" />
       <div className="border-y-2 border-blue-900 p-10 relative bg-glow">
         <button
-          className="absolute text-light opacity-50 left-4 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-start transition z-10"
+          className="absolute text-light opacity-50 left-0.5 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-start transition z-10"
           onClick={prevSlide}
-        ></button>
+        >
+          <TbChevronCompactLeft size={70} />
+        </button>
         <div className="max-w-2xl mx-auto text-center space-y-6 relative">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -90,9 +93,11 @@ const Reviews = () => {
           </AnimatePresence>
         </div>
         <button
-          className="absolute text-light opacity-50 right-4 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-end transition z-10"
+          className="absolute text-light opacity-50 right-0.5 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-end transition z-10"
           onClick={nextSlide}
-        ></button>
+        >
+          <TbChevronCompactRight size={70} />
+        </button>
       </div>
       <div className="flex items-center justify-center gap-2 mt-4">
         {reviews.map((_, i) => (

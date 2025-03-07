@@ -27,7 +27,6 @@ function WorksGrid() {
     <div>
       {/* Грид адаптивный */}
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-3 md:h-[600px] my-5">
-        {/* Левая колонка (меньше, 2 маленьких блока) */}
         <div className="flex flex-col gap-3 md:h-full">
           {projects
             .filter((p) => p.size === "half")
@@ -35,7 +34,7 @@ function WorksGrid() {
               <motion.a
                 key={index}
                 href={project.link}
-                className="relative overflow-hidden rounded-2xl border-2 border-blue-500 flex-1 md:h-1/2 aspect-[16/9] md:aspect-auto"
+                className="relative overflow-hidden rounded-2xl border-2 border-blue-900 flex-1 md:h-1/2 aspect-[16/9] md:aspect-auto"
               >
                 <div className="relative w-full h-full overflow-hidden rounded-xl">
                   <motion.img
@@ -62,7 +61,7 @@ function WorksGrid() {
               <motion.a
                 key={index}
                 href={project.link}
-                className="relative block overflow-hidden rounded-2xl border-2 border-blue-500 h-full aspect-[16/9] md:aspect-auto"
+                className="relative block overflow-hidden rounded-2xl border-2 border-blue-900 h-full aspect-[16/9] md:aspect-auto"
               >
                 <div className="relative w-full h-full overflow-hidden">
                   <motion.img
@@ -82,7 +81,6 @@ function WorksGrid() {
         </div>
       </div>
 
-      {/* Кнопка "View More" */}
       <div className="flex flex-row-reverse mt-6">
         <GlowButton>View More →</GlowButton>
       </div>

@@ -43,7 +43,7 @@
   background: linear-gradient(180deg, #000000 0%, #0b0f19 50%, #102048 100%);
 }
 
-li > a:hover {
+.link:hover {
   color: var(--main-color);
   transition: 300ms;
 }
@@ -51,6 +51,12 @@ li > a:hover {
 .bg-glow {
   background: url("/light.png") no-repeat center bottom;
   background-size: cover;
+}
+
+.bg-cube {
+  background: url("/cube.png") center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .info-numeration {

@@ -1,4 +1,5 @@
 import Footer from "./components/Footer";
+import Form from "./components/Form";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Info from "./components/Info";
@@ -8,7 +9,7 @@ import Works from "./components/Works";
 function App() {
   return (
     <>
-      <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-950">
+      <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-950 to-blue-950">
         <div className="fixed inset-0 bg-[url(./assets/bg-image.png)] bg-no-repeat bg-center "></div>
         <div className="relative z-10">
           <Header />
@@ -18,6 +19,7 @@ function App() {
               <Info />
               <Works />
               <Reviews />
+              <Form />
             </div>
           </div>
           <Footer />

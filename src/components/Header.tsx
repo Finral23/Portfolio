@@ -7,19 +7,29 @@ const Header = () => {
       <nav className="flex space-x-8 py-1 self-center">
         <ul className="flex-none md:flex space-x-6 text-light self-center">
           <li>
-            <a href="#">Home</a>
+            <a className="link" href="#">
+              Home
+            </a>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <a className="link" href="#">
+              Portfolio
+            </a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a className="link" href="#">
+              Services
+            </a>
           </li>
           <li>
-            <a href="#">About Us</a>
+            <a className="link" href="#">
+              About Us
+            </a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a className="link" href="#">
+              Contact
+            </a>
           </li>
         </ul>
         <GlowButton>Get in Touch</GlowButton>
