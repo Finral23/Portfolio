@@ -21,8 +21,8 @@ function App() {
               <Reviews />
               <Form />
             </div>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </div>
     </>
