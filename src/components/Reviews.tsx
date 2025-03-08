@@ -2,7 +2,6 @@ import Heading from "./Heading";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { TbChevronCompactLeft, TbChevronCompactRight } from "react-icons/tb";
 
 const reviews = [
   {
@@ -55,6 +54,14 @@ const Reviews = () => {
     setIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
   };
 
+  const handleDragEnd = (_event: any, info: any) => {
+    if (info.offset.x < -50) {
+      nextSlide();
+    } else if (info.offset.x > 50) {
+      prevSlide();
+    }
+  };
+
   return (
     <div className="my-5">
       <Heading title="Reviews" heading="our clients say" />
@@ -62,9 +69,8 @@ const Reviews = () => {
         <button
           className="absolute text-light opacity-50 left-0.5 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-start transition z-10"
           onClick={prevSlide}
-        >
-          <TbChevronCompactLeft size={70} />
-        </button>
+        ></button>
+
         <div className="max-w-2xl mx-auto text-center space-y-6 relative">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -76,6 +82,10 @@ const Reviews = () => {
               exit="exit"
               custom={direction}
               transition={{ duration: 0.5 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              onDragEnd={handleDragEnd}
+              className="cursor-grab active:cursor-grabbing"
             >
               <p className="text-lg text-light">{reviews[index].text}</p>
               <div className="mt-6 flex flex-col items-center">
@@ -92,13 +102,13 @@ const Reviews = () => {
             </motion.div>
           </AnimatePresence>
         </div>
+
         <button
           className="absolute text-light opacity-50 right-0.5 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-end transition z-10"
           onClick={nextSlide}
-        >
-          <TbChevronCompactRight size={70} />
-        </button>
+        ></button>
       </div>
+
       <div className="flex items-center justify-center gap-2 mt-4">
         {reviews.map((_, i) => (
           <button
