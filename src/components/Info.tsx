@@ -74,7 +74,7 @@ const Info = () => {
               >
                 <div className="flex gap-6 items-center">
                   <motion.span
-                    className="info-numeration text-[300px] md:text-[30rem]"
+                    className="info-numeration text-[120px] md:text-[30rem]"
                     initial={{ y: 40, opacity: 0.7 }}
                     animate={{ y: isOpen ? 0 : 40, opacity: isOpen ? 1 : 0.7 }}
                     transition={{ duration: 0.5 }}
@@ -85,7 +85,9 @@ const Info = () => {
                   <motion.div
                     className="text-start"
                     initial={{ y: 80 }}
-                    animate={{ y: isOpen ? -70 : 0 }}
+                    animate={{
+                      y: isOpen ? (window.innerWidth < 1024 ? 0 : -70) : 3,
+                    }}
                     transition={{ duration: 0.5 }}
                   >
                     <motion.span
@@ -106,7 +108,9 @@ const Info = () => {
                       }}
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
-                      <div className="py-2 max-w-[60%]">{item.content}</div>
+                      <div className="py-2 max-w-[90%] md:max-w-[60%]">
+                        {item.content}
+                      </div>
                     </motion.div>
                   </motion.div>
                 </div>
@@ -114,7 +118,9 @@ const Info = () => {
                 <motion.span
                   className="text-2xl"
                   initial={{ y: 0 }}
-                  animate={{ y: isOpen ? -150 : 0 }}
+                  animate={{
+                    y: isOpen ? (window.innerWidth < 768 ? -50 : -150) : 10,
+                  }}
                   transition={{ duration: 0.5 }}
                 >
                   <ButtonExpand onExpandItem={() => toggleAccordion(index)}>
