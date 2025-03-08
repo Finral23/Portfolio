@@ -53,7 +53,15 @@ const Form = () => {
             SEO-optimized websites that stand out. Let’s talk and craft a
             digital experience tailored to your vision.
           </p>
-          <p>Email: maktraher2004@gmail.com</p>
+          <p>
+            Email:{" "}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=anomalyx.agency@gmail.com"
+              className="link"
+            >
+              anomalyx.agency@gmail.com
+            </a>
+          </p>
           <p>🌍 Location: Available worldwide</p>
           💬 Let’s Connect:{" "}
           <a
