@@ -2,14 +2,14 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="text-light flex justify-between pt-20 pb-10">
+    <footer className="text-light flex justify-between pt-20 pb-10 mx-5">
       <span className="flex justify-between w-[70%]">
         <img
           src="/logo-outline.png"
           className="w-[100px] h-[55px] max-w-2xs mt-2"
         />
         <ul>
-          <li className="text-slate-500 font-medium pb-2">Tech Stack We Use</li>
+          <li className="text-slate-500 font-medium pb-2">Tech Stack</li>
           <li className="text-light">React.ts</li>
           <li className="text-light">Node.js</li>
           <li className="text-light">PostgreSQL</li>

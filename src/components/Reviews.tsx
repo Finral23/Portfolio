@@ -67,7 +67,7 @@ const Reviews = () => {
       <Heading title="Reviews" heading="our clients say" />
       <div className="border-y-2 border-blue-900 p-10 relative bg-glow">
         <button
-          className="absolute text-light opacity-50 left-0.5 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-start transition z-10"
+          className="absolute text-light opacity-50 left-0.5 top-1/2 -translate-y-1/2 md:w-50 h-[100%] flex items-center justify-start transition z-10"
           onClick={prevSlide}
         ></button>
 
@@ -104,7 +104,7 @@ const Reviews = () => {
         </div>
 
         <button
-          className="absolute text-light opacity-50 right-0.5 top-1/2 -translate-y-1/2 w-50 h-[100%] flex items-center justify-end transition z-10"
+          className="absolute text-light opacity-50 right-0.5 top-1/2 -translate-y-1/2 md:w-50 h-[100%] flex items-center justify-end transition z-10"
           onClick={nextSlide}
         ></button>
       </div>
