@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import ButtonOutline from "./ButtonOutline";
 import GradientText from "./GradientText";
 
@@ -27,7 +28,11 @@ const Hero = () => {
             Tailored to your business needs
           </li>
         </ul>
-        <ButtonOutline>View works →</ButtonOutline>
+        <ButtonOutline>
+          <Link to="portfolio" smooth={true} duration={1000}>
+            View Works →
+          </Link>
+        </ButtonOutline>
       </div>
     </div>
   );

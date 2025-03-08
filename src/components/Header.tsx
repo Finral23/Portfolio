@@ -1,5 +1,7 @@
 import logo from "../assets/logo.png";
 import GlowButton from "./GlowButton";
+import { Link } from "react-scroll";
+
 const Header = () => {
   return (
     <header className="flex justify-between items-center p-6 w-full">
@@ -7,32 +9,36 @@ const Header = () => {
       <nav className="flex space-x-8 py-1 self-center">
         <ul className="flex-none md:flex space-x-6 text-light self-center">
           <li>
-            <a className="link" href="#">
+            <Link to="home" smooth={true} duration={1000} className="link">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="link" href="#">
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a className="link" href="#">
-              Services
-            </a>
-          </li>
-          <li>
-            <a className="link" href="#">
+            <Link to="about" smooth={true} duration={1000} className="link">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="link" href="#">
+            <Link to="portfolio" smooth={true} duration={1000} className="link">
+              Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link to="reviews" smooth={true} duration={1000} className="link">
+              Reviews
+            </Link>
+          </li>
+          <li>
+            <Link to="contact" smooth={true} duration={1000} className="link">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
-        <GlowButton>Get in Touch</GlowButton>
+        <GlowButton>
+          <Link to="contact" smooth={true} duration={1000}>
+            Get in Touch
+          </Link>
+        </GlowButton>
       </nav>
     </header>
   );

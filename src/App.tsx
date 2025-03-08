@@ -15,11 +15,21 @@ function App() {
           <Header />
           <div className="max-w-6xl mx-auto">
             <div className="mx-5">
-              <Hero />
-              <Info />
-              <Works />
-              <Reviews />
-              <Form />
+              <section id="home">
+                <Hero />
+              </section>
+              <section id="about">
+                <Info />
+              </section>
+              <section id="portfolio">
+                <Works />
+              </section>
+              <section id="reviews">
+                <Reviews />
+              </section>
+              <section id="contact">
+                <Form />
+              </section>
             </div>
             <Footer />
           </div>

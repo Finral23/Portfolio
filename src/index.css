@@ -46,6 +46,7 @@
 .link:hover {
   color: var(--main-color);
   transition: 300ms;
+  cursor: pointer;
 }
 
 .bg-glow {

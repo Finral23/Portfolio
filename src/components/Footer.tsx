@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 const Footer = () => {
   return (
     <footer className="text-light flex justify-between pt-20 pb-10">
@@ -16,10 +18,26 @@ const Footer = () => {
         <ul>
           <li className="text-slate-500 font-medium pb-2"> Company</li>
 
-          <li className="text-light">About</li>
-          <li className="text-light">Portfolio</li>
-          <li className="text-light">Reviews</li>
-          <li className="text-light">Contact</li>
+          <li className="text-light">
+            <Link to="about" smooth={true} duration={1000} className="link">
+              About
+            </Link>
+          </li>
+          <li className="text-light">
+            <Link to="portfolio" smooth={true} duration={1000} className="link">
+              Portfolio
+            </Link>
+          </li>
+          <li className="text-light">
+            <Link to="reviews" smooth={true} duration={1000} className="link">
+              Reviews
+            </Link>
+          </li>
+          <li className="text-light">
+            <Link to="contact" smooth={true} duration={1000} className="link">
+              Contact
+            </Link>
+          </li>
         </ul>
         <ul>
           <li className="text-slate-500 font-medium pb-2">Social</li>
