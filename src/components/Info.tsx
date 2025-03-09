@@ -70,10 +70,10 @@ const Info = () => {
                 height: isOpen
                   ? window.innerWidth < 768
                     ? "auto"
-                    : 300
+                    : 470
                   : window.innerWidth < 768
                   ? "auto"
-                  : 300,
+                  : 250,
               }}
               transition={{ duration: 0.5 }}
             >
@@ -86,7 +86,7 @@ const Info = () => {
               </motion.span>
               {/* Title and text */}
               <motion.div
-                className="h-[100%] pl-4"
+                className="h-[100%] md:mt-14 pl-4"
                 initial={{
                   alignSelf:
                     window.innerWidth < 768 ? "flex-start" : "flex-end",
@@ -137,11 +137,10 @@ const Info = () => {
               </motion.div>
               {/* Button */}
               <motion.span
-                className="text-2xl h-[100%] pt-2"
+                className="text-2xl h-[100%] md:mt-14 mt-2"
                 initial={{
                   alignSelf: window.innerWidth < 768 ? "flex-end" : "flex-end",
                   y: window.innerWidth < 768 ? "75%" : "75%",
-                  // alignSelf: "flex-end", y: "75%"
                 }}
                 animate={{
                   alignSelf: isOpen
@@ -157,10 +156,7 @@ const Info = () => {
                       : 1
                     : window.innerWidth < 768
                     ? 0
-                    : "75%",
-
-                  // alignSelf: isOpen ? "flex-start" : "flex-end",
-                  // y: isOpen ? 1 : "75%",
+                    : 190,
                 }}
                 transition={{ duration: 0.5 }}
               >
