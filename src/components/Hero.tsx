@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className=" text-white px-6">
       <div className="max-w-3xl">
-        <h1 className="text-7xl font-bold">
+        <h1 className="text-5xl md:text-7xl font-bold">
           Your <GradientText>vision</GradientText>, our{" "}
           <GradientText>code</GradientText> – websites that make an{" "}
           <GradientText>impact</GradientText>.

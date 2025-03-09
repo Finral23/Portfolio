@@ -38,100 +38,140 @@ const Info = () => {
   };
 
   return (
-    <div className="text-gray-200 py-16 mx-auto">
+    <div className="text-gray-200">
       <Heading title="Our Agency" heading="why choose us?" />
       <div className="border-b-2 border-blue-900" />
-      <div>
-        {accordionData.map((item, index) => {
-          const isOpen = openIndex === index;
+      {accordionData.map((item, index) => {
+        const isOpen = openIndex === index;
 
-          return (
+        return (
+          <motion.div
+            key={index}
+            className="border-b-2 border-blue-900 overflow-hidden relative"
+          >
+            {/* Background image */}
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  key={`glow-${index}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  className="absolute inset-0 bg-glow"
+                />
+              )}
+            </AnimatePresence>
+            {/* All info */}
             <motion.div
-              key={index}
-              initial={{ height: 300 }}
-              animate={{ height: isOpen ? "auto" : 230 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="border-b-2 border-blue-900 overflow-hidden relative"
+              className="flex h-[200px] lg:h-auto"
+              initial={{ height: "auto" }}
+              animate={{
+                height: isOpen
+                  ? window.innerWidth < 768
+                    ? "auto"
+                    : 300
+                  : window.innerWidth < 768
+                  ? "auto"
+                  : 300,
+              }}
+              transition={{ duration: 0.5 }}
             >
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    key={`glow-${index}`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
-                    className="absolute inset-0 bg-glow"
-                  />
-                )}
-              </AnimatePresence>
-
-              <motion.div
-                className="flex justify-between w-full items-center p-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+              {/* Number */}
+              <motion.span
+                className="info-numeration text-[150px] md:text-[30rem] flex-none w-[70px] md:w-[220px] flex items-center md:items-start"
                 transition={{ duration: 0.5 }}
               >
-                <div className="flex gap-6 items-center">
-                  <motion.span
-                    className="info-numeration text-[120px] md:text-[30rem]"
-                    initial={{ y: 40, opacity: 0.7 }}
-                    animate={{ y: isOpen ? 0 : 40, opacity: isOpen ? 1 : 0.7 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {item.number}
-                  </motion.span>
-
-                  <motion.div
-                    className="text-start"
-                    initial={{ y: 80 }}
-                    animate={{
-                      y: isOpen ? (window.innerWidth < 1024 ? 0 : -70) : 3,
-                    }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <motion.span
-                      className="text-2xl md:text-5xl font-light"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {item.title}
-                    </motion.span>
-
-                    <motion.div
-                      className="overflow-hidden text-gray-200"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{
-                        opacity: isOpen ? 1 : 0,
-                        height: isOpen ? "auto" : 0,
-                      }}
-                      transition={{ duration: 0.5, ease: "easeInOut" }}
-                    >
-                      <div className="py-2 max-w-[90%] md:max-w-[60%]">
-                        {item.content}
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </div>
-
+                {item.number}
+              </motion.span>
+              {/* Title and text */}
+              <motion.div
+                className="h-[100%] pl-4"
+                initial={{
+                  alignSelf:
+                    window.innerWidth < 768 ? "flex-start" : "flex-end",
+                  y: window.innerHeight < 768 ? "75%" : "75%",
+                }}
+                animate={{
+                  alignSelf: isOpen
+                    ? window.innerWidth < 768
+                      ? "flex-start"
+                      : "flex-start"
+                    : window.innerWidth < 768
+                    ? ""
+                    : "flex-end",
+                  y: isOpen
+                    ? window.innerWidth < 768
+                      ? 0
+                      : 0
+                    : window.innerWidth < 768
+                    ? "0"
+                    : "75%",
+                }}
+                transition={{ duration: 0.5 }}
+              >
+                {/* Title */}
                 <motion.span
-                  className="text-2xl"
-                  initial={{ y: 0 }}
+                  className="text-2xl md:text-3xl lg:text-5xl font-light text-balance"
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.title}
+                </motion.span>
+                {/* Block with text */}
+                <motion.div
+                  className="overflow-hidden text-gray-200 text-xs md:text-base"
+                  initial={{ opacity: 0, height: 0 }}
                   animate={{
-                    y: isOpen ? (window.innerWidth < 768 ? -50 : -150) : 10,
+                    opacity: isOpen ? 1 : 0,
+                    height: isOpen ? "auto" : 0,
                   }}
                   transition={{ duration: 0.5 }}
                 >
-                  <ButtonExpand onExpandItem={() => toggleAccordion(index)}>
-                    {isOpen ? "–" : "+"}
-                  </ButtonExpand>
-                </motion.span>
+                  {/* Text */}
+                  <div className="max-w-[90%] md:max-w-[60%] pt-2">
+                    {item.content}
+                  </div>
+                </motion.div>
               </motion.div>
+              {/* Button */}
+              <motion.span
+                className="text-2xl h-[100%] pt-2"
+                initial={{
+                  alignSelf: window.innerWidth < 768 ? "flex-end" : "flex-end",
+                  y: window.innerWidth < 768 ? "75%" : "75%",
+                  // alignSelf: "flex-end", y: "75%"
+                }}
+                animate={{
+                  alignSelf: isOpen
+                    ? window.innerWidth < 768
+                      ? "flex-start"
+                      : "flex-start"
+                    : window.innerWidth < 768
+                    ? ""
+                    : "flex-end",
+                  y: isOpen
+                    ? window.innerWidth < 768
+                      ? 1
+                      : 1
+                    : window.innerWidth < 768
+                    ? 0
+                    : "75%",
+
+                  // alignSelf: isOpen ? "flex-start" : "flex-end",
+                  // y: isOpen ? 1 : "75%",
+                }}
+                transition={{ duration: 0.5 }}
+              >
+                <ButtonExpand onExpandItem={() => toggleAccordion(index)}>
+                  {isOpen ? "–" : "+"}
+                </ButtonExpand>
+              </motion.span>
             </motion.div>
-          );
-        })}
-      </div>
+          </motion.div>
+        );
+      })}
     </div>
   );
 };
