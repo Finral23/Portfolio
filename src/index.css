@@ -15,6 +15,23 @@
   font-style: normal;
 }
 
+@layer utilities {
+  @media (min-width: 1920px) {
+    .no-image {
+      background-image: none;
+    }
+
+    .bg-gradient {
+      background: radial-gradient(
+        circle at center,
+        #0a0f1d 0%,
+        #020617 35%,
+        #000 90%
+      );
+    }
+  }
+}
+
 .bg-light {
   background-color: var(--bg-color-light);
 }

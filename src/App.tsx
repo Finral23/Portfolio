@@ -9,8 +9,8 @@ import Works from "./components/Works";
 function App() {
   return (
     <>
-      <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-950 to-blue-950">
-        <div className="fixed inset-0 bg-[url(./assets/bg-image.png)] bg-no-repeat bg-center "></div>
+      <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-950 to-blue-950 no-image bg-gradient">
+        <div className="fixed inset-0 bg-[url(./assets/bg-image.png)] bg-no-repeat bg-center no-image"></div>
         <div className="relative z-10">
           <Header />
 
