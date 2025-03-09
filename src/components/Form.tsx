@@ -35,7 +35,7 @@ const Form = () => {
     }
   };
   return (
-    <div className="flex justify-center items-center text-light pt-10">
+    <div className="flex justify-center items-center text-light pt-15">
       <div className="md:grid md:grid-cols-[1fr_1.2fr] items-center md:items-start">
         <div>
           <Heading
@@ -77,8 +77,8 @@ const Form = () => {
             [Fiverr]
           </a>
         </div>
-        <div className="flex justify-center">
-          <div className="max-w-md bg-cube rounded-2xl">
+        <div className="flex justify-center pt-5 md:pt-12 overflow-hidden">
+          <div className="w-full max-w-md bg-cube rounded-2xl overflow-hidden">
             <div className="m-10 rounded-2xl shadow-xl shadow-blue-500  ">
               <p className="text-light opacity-80">
                 Feel free to contact with us and we will get back to you as soon
@@ -92,8 +92,10 @@ const Form = () => {
                   onChange={handleChange}
                   placeholder="Name"
                   required
-                  className="w-full bg-transparent border-b border-slate-300 text-white p-2 outline-none"
+                  maxLength={20}
+                  className="w-full bg-transparent border-b border-slate-300 text-white p-2 outline-none autofill:bg-transparent autofill:text-white"
                 />
+
                 <input
                   type="email"
                   name="email"
@@ -101,14 +103,16 @@ const Form = () => {
                   onChange={handleChange}
                   placeholder="Email Address"
                   required
+                  maxLength={30}
                   className="w-full bg-transparent border-b border-slate-300 text-light p-2 outline-none"
                 />
-                <textarea
+                <input
                   name="message"
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell us about your idea"
                   required
+                  maxLength={50}
                   className="w-full bg-transparent border-b border-slate-300 text-light p-2 outline-none"
                 />
                 <button

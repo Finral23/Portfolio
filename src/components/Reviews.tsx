@@ -63,9 +63,9 @@ const Reviews = () => {
   };
 
   return (
-    <div className="my-5">
+    <div className="mt-5">
       <Heading title="Reviews" heading="our clients say" />
-      <div className="border-y-2 border-blue-900 p-10 relative bg-glow">
+      <div className="border-y-2 border-blue-900 p-2 relative bg-glow">
         <button
           className="absolute text-light opacity-50 left-0.5 top-1/2 -translate-y-1/2 md:w-50 h-[100%] flex items-center justify-start transition z-10"
           onClick={prevSlide}
@@ -92,7 +92,7 @@ const Reviews = () => {
                 <img
                   src={reviews[index].image}
                   alt={reviews[index].author}
-                  className="w-16 h-16 rounded-full border-2 border-blue-500"
+                  className="w-16 h-16 rounded-full shadow-xl"
                 />
                 <p className="text-lg font-semibold text-light">
                   {reviews[index].author}

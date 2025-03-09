@@ -6,7 +6,7 @@ interface Props {
 
 const Heading = ({ title, heading, subtitle }: Props) => {
   return (
-    <div>
+    <div className="py-6">
       <p className="text-blue-500 tracking-widest pb-1">
         {title.toUpperCase()}
       </p>

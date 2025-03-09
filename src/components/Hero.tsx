@@ -1,15 +1,23 @@
 import { Link } from "react-scroll";
 import ButtonOutline from "./ButtonOutline";
-import GradientText from "./GradientText";
 
 const Hero = () => {
   return (
     <div className=" text-white px-6">
       <div className="max-w-3xl">
         <h1 className="text-5xl md:text-7xl font-bold">
-          Your <GradientText>vision</GradientText>, our{" "}
-          <GradientText>code</GradientText> – websites that make an{" "}
-          <GradientText>impact</GradientText>.
+          Your{" "}
+          <span className="bg-gradient-to-r from-blue-700 to-blue-300 bg-clip-text text-transparent">
+            vision
+          </span>
+          , our{" "}
+          <span className="bg-gradient-to-r from-blue-300 to-blue-700 bg-clip-text text-transparent">
+            code
+          </span>{" "}
+          – websites that make an{" "}
+          <span className="bg-gradient-to-r from-blue-800 to-blue-200 bg-clip-text text-transparent">
+            impact.{" "}
+          </span>
         </h1>
         <p className="text-gray-200 mt-6 max-w-2xl">
           We are a team of passionate developers and designers specializing in
