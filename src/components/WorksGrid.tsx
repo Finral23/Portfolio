@@ -15,8 +15,8 @@ const projects = [
     size: "full",
   },
   {
-    title: "WebStore",
-    image: "/pants.png",
+    title: "Сrypto Wallet XZ",
+    image: "/crypto.png",
     link: "#",
     size: "half",
   },
@@ -33,7 +33,7 @@ function WorksGrid() {
             .map((project, index) => (
               <motion.a
                 key={index}
-                href={project.link}
+                // href={project.link}
                 className="relative overflow-hidden rounded-2xl border-2 border-blue-900 flex-1 md:h-1/2 aspect-[16/9] md:aspect-auto"
               >
                 <div className="relative w-full h-full overflow-hidden rounded-xl">
@@ -60,7 +60,7 @@ function WorksGrid() {
             .map((project, index) => (
               <motion.a
                 key={index}
-                href={project.link}
+                // href={project.link}
                 className="relative block overflow-hidden rounded-2xl border-2 border-blue-900 h-full aspect-[16/9] md:aspect-auto"
               >
                 <div className="relative w-full h-full overflow-hidden">
