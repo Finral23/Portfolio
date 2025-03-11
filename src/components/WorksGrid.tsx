@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import GlowButton from "./GlowButton";
 
 const projects = [
   {
