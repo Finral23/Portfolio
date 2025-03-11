@@ -81,9 +81,9 @@ function WorksGrid() {
         </div>
       </div>
 
-      <div className="flex flex-row-reverse mt-6">
+      {/* <div className="flex flex-row-reverse mt-6">
         <GlowButton>View More →</GlowButton>
-      </div>
+      </div> */}
     </div>
   );
 }
