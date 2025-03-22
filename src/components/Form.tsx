@@ -69,7 +69,7 @@ const Form = () => {
             href="https://www.linkedin.com/in/vladyslav-svitelskyi-882a322a5/"
           >
             [LinkedIn]
-          </a>{" "}
+          </a>
           <a className="link" href="https://t.me/akanenai">
             [Telegram]
           </a>
