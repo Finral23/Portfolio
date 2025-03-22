@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Сrypto Wallet XZ",
+    image: "/crypto.png",
+    link: "https://anomalyx-crypto.vercel.app",
+    size: "half",
+  },
+  {
     title: "Movie Ticket Booking",
     image: "/cinema.png",
     link: "",
@@ -12,12 +18,6 @@ const projects = [
     image: "/hotel.png",
     link: "https://luxury-hotel-pink.vercel.app",
     size: "full",
-  },
-  {
-    title: "Сrypto Wallet XZ",
-    image: "/crypto.png",
-    link: "",
-    size: "half",
   },
 ];
 
@@ -32,7 +32,7 @@ function WorksGrid() {
             .map((project, index) => (
               <motion.a
                 key={index}
-                // href={project.link}
+                href={project.link}
                 className="relative overflow-hidden rounded-2xl border-2 border-blue-900 flex-1 md:h-1/2 aspect-[16/9] md:aspect-auto"
               >
                 <div className="relative w-full h-full overflow-hidden rounded-xl">
